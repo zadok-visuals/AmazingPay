@@ -292,7 +292,8 @@
 			.mt-20 {
 				display: flex;
 				white-space: nowrap;
-				gap: 20px;
+				justify-content: space-between;
+				gap: 10px;
 			}
 			.download-btn {
 				display: inline-flex; /* Use inline-flex for centering content */
@@ -308,6 +309,7 @@
 				text-decoration: none; /* Remove underline from links */
 				height: 100%; /* Fixed height */
 				white-space: nowrap; /* Prevent text wrapping */
+				
 			}
 			@media only screen and (min-width:993px)
 			{.download-btn{min-width: 80px;} .mt-20 {gap: 5px;} .download-btn:hover{top:-1px;background:#ff9d00}};
@@ -523,21 +525,7 @@
 		<main id="main" class="site-main">
 			<div class="header-banner home-page-new">
 				<div class="banner-slider">
-					<!-- done -->
-					<div class="each-banner banner-slide home-page">
-						<div class="banner-bg bg-cover" style="background-image: url('images/4yrs\ amaze.jpg');"></div>
-						<div class="mobile-banner-bg bg-cover" style="background-image: url('images/4yrs\ amaze\ phone.jpg');"></div>
-						<div class="new-banner-content">
-							<div class="new-banner-content-text-sec">
-								<h1 class="banner-heading" data-animation="fadeInUp" data-delay="1s">Celebrating 4 Years of Excellence</h1>
-								<div class="banner-text" data-animation="fadeInUp" data-delay="1s">
-									<p>Thank you for being part of our journey!</p>
-								</div>
-								<a class="new-button" data-animation="fadeInUp" data-delay="1s" href="">Join the Celebration</a>
-							</div>
-						</div>
-					</div>
-
+					
 					<!-- done -->
 					<div class="each-banner banner-slide home-page">
 						<div class="banner-bg bg-cover" style="background-image: url('images/Flag\ amaze.jpg');"></div>
@@ -593,6 +581,21 @@
 									<p>Experience seamless trading anytime, anywhere!</p>
 								</div>
 								<a class="new-button" data-animation="fadeInUp" data-delay="1s" href="">Download Now</a>
+							</div>
+						</div>
+					</div>
+
+					<!-- done -->
+					<div class="each-banner banner-slide home-page">
+						<div class="banner-bg bg-cover" style="background-image: url('images/4yrs\ amaze.jpg');"></div>
+						<div class="mobile-banner-bg bg-cover" style="background-image: url('images/4yrs\ amaze\ phone.jpg');"></div>
+						<div class="new-banner-content">
+							<div class="new-banner-content-text-sec">
+								<h1 class="banner-heading" data-animation="fadeInUp" data-delay="1s">Celebrating 4 Years of Excellence</h1>
+								<div class="banner-text" data-animation="fadeInUp" data-delay="1s">
+									<p>Thank you for being part of our journey!</p>
+								</div>
+								<a class="new-button" data-animation="fadeInUp" data-delay="1s" href="">Join the Celebration</a>
 							</div>
 						</div>
 					</div>
@@ -664,7 +667,7 @@
 						<div id="promptbox_extension_root"></div>
 						<div id="promptbox_extension_root"></div>
 						<p class="quote">4 years ago, AmazingGroup launched the AmazingPay project providing leading digital solutions for Africa’s progress, and offering Africans hope, dignity, and opportunity.</p>
-						<p class="name">Osazuwa Desmond Ehiorobo</p>
+						<p class="name">(Dr.) Osazuwa Desmond Ehiorobo</p>
 						<p class="role">Chief Executive Officer</p>
 						<p><a class="button" href="">View leadership</a></p>
 						<div id="promptbox_extension_root"></div>
@@ -866,7 +869,7 @@
 					<div class="footer-nav-custom footer-menu-desktop">
 						<div class="footer-nav-column"><h3>About</h3><ul><li><a href="">Contact Us</a></li></ul></div>
 						<div class="footer-nav-column"><h3>Newsroom</h3><ul><li><a href="">Spotlight stories</a></li><li><a href="">Events</a></li></ul></div>
-						<div class="footer-nav-column"><h3>Legal</h3><ul><li><a href="">Terms &amp; Conditions</a></li><li><a href="">Privacy Policy</a></li><li><a href="">Cookie Policy</a></li></ul></div>
+						<div class="footer-nav-column"><h3>Legal</h3><ul><li><a href="">Terms &amp; Conditions</a></li><li><a href="">Privacy Policy</a></li></ul></div>
 					</div>
 
 					<!-- Mobile Menu -->
@@ -902,7 +905,6 @@
 								<ul>
 									<li><a href="">Terms &amp; Conditions</a></li>
 									<li><a href="">Privacy Policy</a></li>
-									<li><a href="">Cookie Policy</a></li>
 								</ul>
 							</div>
 						</div>
@@ -926,12 +928,12 @@
 		</footer>
 
 		<!-- Cookie Policy -->
-		<div class="banner-cookie cookie-message">
+		<!-- <div class="banner-cookie cookie-message">
 			<div class="conntent-content">
 				<h5 class="cookie-head">Cookie notice</h5>
 				<p class="cookie-text">By using our website you agree to our <a href="/legal?tablink=cookie_policy" target="_blank">Cookie Policy.</a></p>
 			</div>
-		</div>
+		</div> -->
 
 		<!-- control live btc -->
 		<script>
