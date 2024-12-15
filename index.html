@@ -250,41 +250,42 @@
 				overflow-wrap: anywhere;
 			}
 
-			.button-con{
-				position: relative; /* Establishes a positioning context for the button */
-				width: 100%; /* Full width of the container */
-				max-width: 400px; /* Optional: Set a maximum width for the container */
-				right: 0px;
-				bottom: 24px;
+			.button-con {
+				display: flex;
+				justify-content: center; /* Center the button horizontally */
+				margin: 20px; /* Add some margin for spacing */
+				white-space: nowrap;
 			}
 
 			.responsive-button {
-				padding: 12px 24px; /* Padding for the button */
+				background-color: #000000; /* Green background */
+				border: 2px solid transparent; /* Remove borders */
+				color: white; /* White text color */
+				padding: 15px 32px; /* Padding for the button */
+				text-align: center; /* Center the text */
+				text-decoration: none; /* Remove underline */
+				display: inline-block; /* Make it inline-block */
 				font-size: 16px; /* Font size */
-				color: #fff; /* Text color */
-				background-color: #000000; /* Button background color */
-				border: 2px solid #000000; /* No border */
-				border-radius: 8px; /* Rounded corners */
-				cursor: pointer; /* Pointer cursor on hover */
-				transition: background-color 0.3s ease, transform 0.3s ease; /* Transition for hover effects */
-				position: absolute; /* Position the button absolutely within the container */
-				white-space: nowrap; /* Prevent text from wrapping */
-				/* overflow: hidden;  Hide overflow text */
-				/* text-overflow: ellipsis;  Add ellipsis for overflow text */
+				transition: background-color 0.3s; /* Smooth transition for hover effect */
+				border-radius: 5px; /* Rounded corners */
+				width: 100%; /* Make the button take full width */
+				max-width: 300px; /* Set a max width for larger screens */
 			}
 
 			.responsive-button:hover {
-				background-color: #ffffff; /* Darker background on hover */
+				background-color: white; /* Black background on hover */
+				border-color: #000000;
 				color: #000000;
-				transform: translateY(-2px); /* Slight lift effect on hover */
+				transform: translateY(-2px);
 			}
 
-			@media (min-width: 768px) {
+			@media (max-width: 600px) {
 				.responsive-button {
-					margin-right: auto;
-					width: auto; /* Auto width on larger screens */
-				} .button-con {left: 30px;
-					bottom: 24px;}
+					font-size: 12px; /* Smaller font size on small screens */
+					padding: 10px 20px; /* Adjust padding for smaller screens */
+				}
+
+				.button-con {margin: 10px;}
 			}
 
 			/* get it now buttons */
