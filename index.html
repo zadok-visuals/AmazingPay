@@ -81,8 +81,8 @@
 		<link rel="dns-prefetch" href="//stats.wp.com">
 		<link rel="dns-prefetch" href="//unpkg.com">
 		<link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
-		<link rel="alternate" type="application/rss+xml" title="MTN.com » Feed" href="https://www.mtn.com/feed/">
-		<link rel="alternate" type="application/rss+xml" title="MTN.com » Comments Feed" href="https://www.mtn.com/comments/feed/">
+		<link rel="alternate" type="application/rss+xml" title="amazingpay.app » Feed" href="">
+		<link rel="alternate" type="application/rss+xml" title="amazingpay.app » Comments Feed" href="">
 		<link rel="stylesheet" id="all-css-0" href="css/_static_1.css" type="text/css" media="all">
 		<link rel="stylesheet" id="all-css-2" href="css/_static.css" type="text/css" media="all">
 		<style id="jetpack-sharing-buttons-style-inline-css">
@@ -102,14 +102,11 @@
 		<link rel="stylesheet" id="aos-css" href="css/aos.css" media="all">
 		<link rel="stylesheet" id="all-css-10" href="css/slick.css" type="text/css" media="all">
 		<link rel="stylesheet" id="swiper-css-css" href="css/swiper.min.css" media="all">
-		<link rel="https://api.w.org/" href="https://www.mtn.com/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="https://www.mtn.com/wp-json/wp/v2/pages/53987"><link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.mtn.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.mtn.com%2F">
-		<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.mtn.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.mtn.com%2F&amp;format=xml">
 
 		<style>img#wpstats{display:none}</style>
 			<link rel="icon" href="images/cropped-cropped-favicon-siteIcon-512x512-1-1-2_1.png" sizes="32x32">
 			<link rel="icon" href="images/cropped-cropped-favicon-siteIcon-512x512-1-1-2_2.png" sizes="192x192">
 			<link rel="apple-touch-icon" href="images/cropped-cropped-favicon-siteIcon-512x512-1-1-2.png">
-			<meta name="msapplication-TileImage" content="https://www.mtn.com/wp-content/uploads/2022/02/cropped-cropped-favicon-siteIcon-512x512-1-1-2.png?w=270">
 			<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 		
 		<style type="text/css" id="wp-custom-css">
@@ -143,8 +140,10 @@
 				
 			}
 
+			/* "MTNBrighterSans-light", */
+
 			.mtn-fontaza {
-				font-family: "MTNBrighterSans-light", sans-serif;
+				font-family: sans-serif;
 				line-height: 54px;
 				color: #202020;
 			}
@@ -154,10 +153,10 @@
 				color: black;
 			}
 
+			/* "MTNBrighterSans-light", */
 			.font-teams-content{
-				font-family:"MTNBrighterSans-light",sans-serif;
-				
-				
+				font-family:sans-serif;
+		
 			}
 
 			a { text-decoration: none;
@@ -183,9 +182,10 @@
 			height: auto;
 			}
 
+			/* 'MTNBrighterSans-Bold', */
 			.page-template-home-sustainability .header-banner .each-banner .banner-content .banner-heading {
 				font-size: 53px;
-				font-family: 'MTNBrighterSans-Bold', sans-serif;
+				font-family: sans-serif;
 				color: #fff !important;
 				width: 485px;
 				line-height: 55px;
@@ -230,6 +230,8 @@
 			.pc-landing .pc-video .video-intro-text p em {
 				font-family: "WorkSans-Regular", sans-serif;
 			}
+			
+			
 
 			.header-banner .banner-dots .slick-dots {
 				max-width: 580px;
@@ -247,6 +249,67 @@
 			
 				overflow-wrap: anywhere;
 			}
+
+			.button-con{
+				position: relative; /* Establishes a positioning context for the button */
+				width: 100%; /* Full width of the container */
+				max-width: 400px; /* Optional: Set a maximum width for the container */
+				right: 0px;
+				bottom: 24px;
+			}
+
+			.responsive-button {
+				padding: 12px 24px; /* Padding for the button */
+				font-size: 16px; /* Font size */
+				color: #fff; /* Text color */
+				background-color: #000000; /* Button background color */
+				border: 2px solid #000000; /* No border */
+				border-radius: 8px; /* Rounded corners */
+				cursor: pointer; /* Pointer cursor on hover */
+				transition: background-color 0.3s ease, transform 0.3s ease; /* Transition for hover effects */
+				position: absolute; /* Position the button absolutely within the container */
+				white-space: nowrap; /* Prevent text from wrapping */
+				/* overflow: hidden;  Hide overflow text */
+				/* text-overflow: ellipsis;  Add ellipsis for overflow text */
+			}
+
+			.responsive-button:hover {
+				background-color: #ffffff; /* Darker background on hover */
+				color: #000000;
+				transform: translateY(-2px); /* Slight lift effect on hover */
+			}
+
+			@media (min-width: 768px) {
+				.responsive-button {
+					margin-right: auto;
+					width: auto; /* Auto width on larger screens */
+				} .button-con {left: 30px;
+					bottom: 24px;}
+			}
+
+			/* get it now buttons */
+			.mt-20 {
+				display: flex;
+				white-space: nowrap;
+				gap: 20px;
+			}
+			.download-btn {
+				display: inline-flex; /* Use inline-flex for centering content */
+				align-items: center; /* Center items vertically */
+				justify-content: center; /* Center items horizontally */
+				padding: 12px 16px; /* Padding for the button */
+				border-radius: 12px; /* Rounded corners */
+				transition: all 0.3s ease-in-out; /* Smooth transition */
+				font-weight: 600; /* Bold text */
+				color: #fff; /* Text color */
+				background: #000; /* Background color */
+				border: none; /* No border */
+				text-decoration: none; /* Remove underline from links */
+				height: 100%; /* Fixed height */
+				white-space: nowrap; /* Prevent text wrapping */
+			}
+			@media only screen and (min-width:993px)
+			{.download-btn{min-width: 100px;} .download-btn:hover{top:-1px;background:#ff9d00}}
 		</style>
 	</head>
 
@@ -348,13 +411,21 @@
 							</ul>
 						</li>
 					</ul>
-		
+					<div class="button-con">
+						<button class="responsive-button">Live BTC Rate:   <strong id="btc-price" style="color: #ffad01;">${{ btc_price }}</strong></button>
+					</div>
+					
+
+
 					<div class="header-buttons-containers">
-						<button id="toggleButton" class="search search-icon"></button>
 						<button class="mobile-toggle burger"></button>
 					</div>
+
 				</div>
+
+				
 			</div>
+			
 		
 		</header>
 
@@ -441,7 +512,7 @@
 
 			<!-- Call to action section container -->
 			<div class="main-call-to-action new-cta-btns">
-				<div class="call-to-action-container">
+				<!-- <div class="call-to-action-container">
 					<a class="each-action" href="">
 						<img alt="action-img" src="images/Icon.svg">
 						<div class="action-text">About</div>
@@ -462,8 +533,25 @@
 						<img alt="action-img" src="images/People-Culture.svg">
 						<div class="action-text">People &amp; Culture</div>
 					</a>
+				</div> -->
+
+				<!-- Section for download now buttons -->
+				<div style="display: flex; justify-content: center; align-items: center;">
+					<div class="download mt-20">
+						<a class="download-btn" target="_blank" href="">
+							<img src="https://storage.googleapis.com/new-abeg-avatar-dev/piggyvest-cms-staging/white_Apple_Logo_768cf7ce21/white_Apple_Logo_768cf7ce21.svg" alt="download-apple" width="18" height="22" style="margin-right: 8px;"/> 
+							Get on iPhone
+						</a>
+						<a class="download-btn" target="_blank" href="">
+							<img src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/google_icon_9867fc9be6/google_icon_9867fc9be6.svg" alt="download-google" width="24" height="24" style="margin-right: 8px;"/> 
+							Get on Android
+						</a>
+					</div>
 				</div>
+
 			</div>
+
+			
 			
 			<!-- Ceo message area -->
 			<div id="ceo-message" class="ceo-container" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
@@ -746,6 +834,26 @@
 				<p class="cookie-text">By using our website you agree to our <a href="/legal?tablink=cookie_policy" target="_blank">Cookie Policy.</a></p>
 			</div>
 		</div>
+
+		<!-- control live btc -->
+		<script>
+			async function fetchBTCPrice() {
+				try {
+					const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd');
+					const data = await response.json();
+					const btcPrice = data.bitcoin.usd;
+					document.getElementById('btc-price').innerText = `$${btcPrice.toLocaleString()}`;
+				} catch (error) {
+					console.error('Error fetching BTC price:', error);
+				}
+			}
+		
+			// Fetch the BTC price when the page loads
+			fetchBTCPrice();
+		
+			// Optionally, you can set an interval to update the price every minute
+			setInterval(fetchBTCPrice, 60000); // Update every 60 seconds
+		</script>
 		<script src="js/jquery-1.11.1.min.js"></script>
 		<script src="js/jquery.validate.min.js"></script>
 		<script type="text/javascript">
@@ -1041,13 +1149,13 @@
 
 
 		<script type="text/javascript" src="_static"></script><script type="text/javascript" src="js/e-202450.js" id="jetpack-stats-js" data-wp-strategy="defer"></script>
-		<script type="text/javascript" id="jetpack-stats-js-after">
+		<!-- <script type="text/javascript" id="jetpack-stats-js-after">
 		/* <![CDATA[ */
 		_stq = window._stq || [];
 		_stq.push([ "view", JSON.parse("{\"v\":\"ext\",\"blog\":\"202900876\",\"post\":\"53987\",\"tz\":\"0\",\"srv\":\"www.mtn.com\",\"hp\":\"vip\",\"j\":\"1:14.0\"}") ]);
 		_stq.push([ "clickTrackerInit", "202900876", "53987" ]);
 		/* ]]> */
-		</script>
+		</script> -->
 
 	</body>
 </html>
