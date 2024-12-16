@@ -289,47 +289,50 @@
 			}
 
 			/* get it now buttons */
-			.mt-20 {
-				display: flex;
-				white-space: nowrap;
-				justify-content: space-between;
-				gap: 10px;
-			}
-			.download-btn {
-				display: inline-flex; /* Use inline-flex for centering content */
-				align-items: center; /* Center items vertically */
-				justify-content: center; /* Center items horizontally */
-				padding: 12px 16px; /* Padding for the button */
-				border-radius: 12px; /* Rounded corners */
-				transition: all 0.3s ease-in-out; /* Smooth transition */
-				font-weight: 600; /* Bold text */
-				color: #fff; /* Text color */
-				background: #000; /* Background color */
-				border: none; /* No border */
-				text-decoration: none; /* Remove underline from links */
-				height: 100%; /* Fixed height */
-				white-space: nowrap; /* Prevent text wrapping */
-				
-			}
-			@media only screen and (min-width:993px)
-			{.download-btn{min-width: 80px; font-size: 12px;} .mt-20 {gap: 5px;} .download-btn:hover{top:-1px;background:#ff9d00}};
+			.mt-20 { 
+				display: flex; 
+				white-space: nowrap; 
+				justify-content: space-between; 
+				gap: 10px; 
+			} 
 
-			body {
-				display: flex;
-				justify-content: center; /* Center the calculator horizontally */
-				align-items: center; /* Center the calculator vertically */
-				height: 100vh; /* Full viewport height */
-				margin: 0; /* Remove default margin */
-				background-color: #f0f0f0; /* Light background color */
+			.download-btn { 
+				display: inline-flex; /* Use inline-flex for centering content */ 
+				align-items: center; /* Center items vertically */ 
+				justify-content: center; /* Center items horizontally */ 
+				padding: 12px 16px; /* Padding for the button */ 
+				border-radius: 12px; /* Rounded corners */ 
+				transition: all 0.3s ease-in-out; /* Smooth transition */ 
+				font-weight: 600; /* Bold text */ 
+				color: #fff; /* Text color */ 
+				background: #000; /* Background color */ 
+				border: none; /* No border */ 
+				text-decoration: none; /* Remove underline from links */ 
+				height: 100%; /* Fixed height */ 
+				white-space: nowrap; /* Prevent text wrapping */ 
 			}
 
+			/* Responsive Styles */
+			@media (max-width: 600px) {
+				.mt-20 {
+					flex-direction: column; /* Stack items vertically on small screens */
+					align-items: center; /* Center items horizontally */
+				}
+
+				.download-btn {
+					padding: 10px 14px; /* Adjust padding for smaller screens */
+					font-size: 14px; /* Smaller font size */
+					width: 100%; /* Make the button take full width */
+					max-width: 200px; /* Set a max width for the button */
+				}
+			}
+			
 			.btc-calculator {
 				display: flex;
 				flex-direction: column;
 				align-items: center; /* Center items in the calculator */
 				justify-items: center;
 				margin: 20px auto; /* Center the calculator horizontally */
-				margin-top: 50px;
 				padding: 2rem; /* Use rem for better scalability */
 				border: 1px solid #ccc;
 				border-radius: 10px;
@@ -337,21 +340,21 @@
 				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 				width: 90%; /* Use percentage for width */
 				max-width: 400px; /* Max width for larger screens */
-			}
+				}
 
-			.btc-calculator h2 {
+				.btc-calculator h2 {
 				margin-bottom: 1.5rem; /* Use rem for better scalability */
 				color: #333; /* Darker text color */
 				font-size: 1.5rem; /* Use rem for font size */
-			}
+				}
 
-			.btc-calculator label {
+				.btc-calculator label {
 				margin-bottom: 0.5rem; /* Use rem for better scalability */
 				color: #555; /* Slightly lighter text color */
 				font-size: 1rem; /* Use rem for font size */
-			}
+				}
 
-			.btc-calculator input {
+				.btc-calculator input {
 				padding: 0.625rem; /* Use rem for better scalability */
 				margin-bottom: 1rem; /* Use rem for better scalability */
 				border: 1px solid #ccc;
@@ -359,9 +362,9 @@
 				width: 100%; /* Full width */
 				max-width: 300px; /* Max width for input */
 				font-size: 1rem; /* Use rem for font size */
-			}
+				}
 
-			.btc-calculator button {
+				.btc-calculator button {
 				padding: 0.625rem 1.25rem; /* Use rem for better scalability */
 				background-color: #000000; /* Black background */
 				color: white; /* White text color */
@@ -370,38 +373,115 @@
 				cursor: pointer;
 				transition: background-color 0.3s;
 				font-size: 1rem; /* Use rem for font size */
-			}
+				}
 
-			.btc-calculator button:hover {
-				background-color: #ffad01; /* Darker background on hover */
-			}
+				.btc-calculator button:hover {
+				background-color: #444444; /* Darker background on hover */
+				}
 
-			.btc-calculator h3 {
+				.btc-calculator h3 {
 				margin-top: 1.5rem; /* Use rem for better scalability */
 				color: #000000; /* Black text color */
 				font-size: 1.125rem; /* Use rem for font size */
 				font-weight: bold; /* Bold text for emphasis */
 				text-align: center; /* Center the result text */
 				padding: 0.625rem; /* Use rem for better scalability */
-			}
+				}
 
-			/* Media Queries for Responsiveness */
-			@media (max-width: 600px) {
+				/* Media Queries for Responsiveness */
+				@media (max-width: 600px) {
 				.btc-calculator {
-					padding: 1.5rem; /* Adjust padding for smaller screens */
+				padding: 1.2rem; /* Adjust padding for smaller screens */
 				}
 
 				.btc-calculator h2 {
-					font-size: 1.25rem; /* Smaller font size for headings */
+				font-size: 1.25rem; /* Smaller font size for headings */
 				}
 
 				.btc-calculator label,
 				.btc-calculator input,
 				.btc-calculator button,
 				.btc-calculator h3 {
-					font-size: 0.875rem; /* Smaller font size for other elements */
+				font-size: 0.875rem; /* Smaller font size for other elements */
 				}
 			}
+
+			/* 4 cards area */
+
+			.swiper-slide {
+			display: flex;
+			flex-grow: 0;
+			flex-direction: column;
+			position: relative;
+			aspect-ratio: 12 / 16 !important; /* Maintain aspect ratio */
+			gap: 8px; /* Space between elements */
+			border-radius: 24px; /* Rounded corners */
+			overflow: hidden; /* Prevent overflow */
+			background-size: cover; /* Cover background */
+			background-position: center; /* Center background */
+			transition: all 0.5s ease; /* Smooth transition for all properties */
+			text-decoration: none; /* Remove underline from links */
+		}
+
+		@media (min-width: 600px) and (max-width: 900px) {
+		.swiper-slide {
+			flex: 1 0 45%; /* Allow two slides per row */
+			margin: 1%; /* Add margin for spacing */
+			max-width: 280px; /* Set a max width to prevent it from getting larger */
+		}
+
+		.swiper-slide .carousel-content {
+			padding: 16px; /* Adjust padding for medium screens */
+		}
+
+		.swiper-slide .carousel-content p {
+			width: auto; /* Allow paragraphs to take full width */
+			margin-bottom: 50px; /* Adjust space below paragraph */
+		}
+
+		.swiper-slide .carousel-content .arrow {
+			width: 30px; /* Adjust arrow size */
+			height: 22px; /* Adjust arrow size */
+		}
+		}
+
+		.swiper-slide:hover {
+			transform: scale(1.05); /* Scale effect on hover */
+			box-shadow: 1px 6px 20px -5px rgba(0, 0, 0, 0.46); /* Shadow effect */
+		}
+
+		.swiper-slide .carousel-content {
+			display: flex; /* Flexbox for content */
+			width: 100%; /* Full width */
+			height: 100%; /* Full height */
+			flex-direction: column; /* Stack content vertically */
+			position: relative; /* Position relative for absolute children */
+			padding: 21px; /* Padding for content */
+			color: #fff; /* Default text color */
+		}
+
+		.swiper-slide .carousel-content .platform-icon {
+			width: 160px; /* Width of platform icon */
+			height: 68px; /* Height of platform icon */
+			margin-bottom: 16px; /* Space below icon */
+		}
+
+		.swiper-slide .carousel-content p {
+			color: #fff; /* Default paragraph color */
+			width: 201px; /* Fixed width for paragraphs */
+			margin-bottom: 100px; /* Space below paragraph */
+		}
+
+		.swiper-slide .carousel-content p.text-black {
+			color: #202020; /* Black text for specific paragraphs */
+		}
+
+		.swiper-slide .carousel-content .arrow {
+			width: 38px; /* Width of arrow */
+			height: 27px; /* Height of arrow */
+			position: absolute; /* Position arrow absolutely */
+			bottom: 30px; /* Position from the bottom */
+		}
 		</style>
 	</head>
 
@@ -667,7 +747,7 @@
 						<div id="promptbox_extension_root"></div>
 						<div id="promptbox_extension_root"></div>
 						<p class="quote">4 years ago, AmazingGroup launched the AmazingPay project providing leading digital solutions for Africa’s progress, and offering Africans hope, dignity, and opportunity.</p>
-						<p class="name">(Dr.) Osazuwa Desmond Ehiorobo</p>
+						<h4>(Dr.)</h4><p class="name"> Osazuwa Desmond Ehiorobo</p>
 						<p class="role">Chief Executive Officer</p>
 						<p><a class="button" href="">View leadership</a></p>
 						<div id="promptbox_extension_root"></div>
