@@ -83,7 +83,7 @@
 		<link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
 		<link rel="alternate" type="application/rss+xml" title="amazingpay.app » Feed" href="">
 		<link rel="alternate" type="application/rss+xml" title="amazingpay.app » Comments Feed" href="">
-		<link rel="stylesheet" id="all-css-0" href="css/_static_1.css" type="text/css" media="all">
+		<!-- <link rel="stylesheet" id="all-css-0" href="css/_static_1.css" type="text/css" media="all"> -->
 		<link rel="stylesheet" id="all-css-2" href="css/_static.css" type="text/css" media="all">
 		<style id="jetpack-sharing-buttons-style-inline-css">
 		.jetpack-sharing-buttons__services-list{display:flex;flex-direction:row;flex-wrap:wrap;gap:0;list-style-type:none;margin:5px;padding:0}.jetpack-sharing-buttons__services-list.has-small-icon-size{font-size:12px}.jetpack-sharing-buttons__services-list.has-normal-icon-size{font-size:16px}.jetpack-sharing-buttons__services-list.has-large-icon-size{font-size:24px}.jetpack-sharing-buttons__services-list.has-huge-icon-size{font-size:36px}@media print{.jetpack-sharing-buttons__services-list{display:none!important}}.editor-styles-wrapper .wp-block-jetpack-sharing-buttons{gap:0;padding-inline-start:0}ul.jetpack-sharing-buttons__services-list.has-background{padding:1.25em 2.375em}
@@ -110,6 +110,7 @@
 			<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 		
 		<style type="text/css" id="wp-custom-css">
+			
 			
 			.about-grid .herobanner{
 				background-size: cover!important;
@@ -177,10 +178,10 @@
 				list-style: none;
 				text-align: center;
 			}
-			.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_container ul.wp-block-jetpack-slideshow_swiper-wrapper {
+			/* .wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_container ul.wp-block-jetpack-slideshow_swiper-wrapper {
 			display: flex;
 			height: auto;
-			}
+			} */
 
 			/* 'MTNBrighterSans-Bold', */
 			.page-template-home-sustainability .header-banner .each-banner .banner-content .banner-heading {
@@ -279,9 +280,10 @@
 				transform: translateY(-2px);
 			}
 
-			@media (max-width: 600px) {
+			@media (max-width: 500px) {
 				.responsive-button {
 					font-size: 12px; /* Smaller font size on small screens */
+					max-width: 200px;
 					padding: 10px 20px; /* Adjust padding for smaller screens */
 				}
 
@@ -408,80 +410,73 @@
 
 			/* 4 cards area */
 
-			.swiper-slide {
-			display: flex;
-			flex-grow: 0;
-			flex-direction: column;
-			position: relative;
-			aspect-ratio: 12 / 16 !important; /* Maintain aspect ratio */
-			gap: 8px; /* Space between elements */
-			border-radius: 24px; /* Rounded corners */
-			overflow: hidden; /* Prevent overflow */
-			background-size: cover; /* Cover background */
-			background-position: center; /* Center background */
-			transition: all 0.5s ease; /* Smooth transition for all properties */
-			text-decoration: none; /* Remove underline from links */
-		}
+			/* General styles for the swiper container */
+.swiper-container {
+    width: 100%; /* Full width */
+    height: auto; /* Adjust height based on content */
+    margin: 20px 0; /* Margin for spacing */
+}
 
-		@media (min-width: 600px) and (max-width: 900px) {
-		.swiper-slide {
-			flex: 1 0 45%; /* Allow two slides per row */
-			margin: 1%; /* Add margin for spacing */
-			max-width: 280px; /* Set a max width to prevent it from getting larger */
-		}
+/* Styles for swiper slides */
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    aspect-ratio: 12 / 16; /* Maintain aspect ratio */
+    border-radius: 24px; /* Rounded corners */
+    overflow: hidden; /* Prevent overflow */
+    background-size: cover; /* Cover background */
+    background-position: center; /* Center background */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    text-decoration: none; /* Remove underline from links */
+    margin: 5px; /* Margin for spacing */
+}
 
-		.swiper-slide .carousel-content {
-			padding: 16px; /* Adjust padding for medium screens */
-		}
+/* Hover effect for slides */
+.swiper-slide:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
 
-		.swiper-slide .carousel-content p {
-			width: auto; /* Allow paragraphs to take full width */
-			margin-bottom: 50px; /* Adjust space below paragraph */
-		}
+/* Styles for carousel content */
+.carousel-content {
+    display: flex; /* Flexbox for content */
+    flex-direction: column; /* Stack content vertically */
+    align-items: flex-start; /* Align items to the start (top) */
+    padding: 16px; /* Padding for content */
+    color: #fff; /* Default text color */
+    text-align: left; /* Align text to the left */
+    height: 100%; /* Ensure full height for the content area */
+}
 
-		.swiper-slide .carousel-content .arrow {
-			width: 30px; /* Adjust arrow size */
-			height: 22px; /* Adjust arrow size */
-		}
-		}
+/* Styles for paragraph text */
+.carousel-content p {
+    margin: 0; /* Remove default margin */
+    font-size: 16px; /* Font size */
+    line-height: 1.5; /* Line height for readability */
+	color: white;
+}
 
-		.swiper-slide:hover {
-			transform: scale(1.05); /* Scale effect on hover */
-			box-shadow: 1px 6px 20px -5px rgba(0, 0, 0, 0.46); /* Shadow effect */
-		}
+/* Styles for the arrow icon */
+.arrow {
+    width: 30px; /* Width of arrow */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 10px; /* Space above the arrow */
+}
 
-		.swiper-slide .carousel-content {
-			display: flex; /* Flexbox for content */
-			width: 100%; /* Full width */
-			height: 100%; /* Full height */
-			flex-direction: column; /* Stack content vertically */
-			position: relative; /* Position relative for absolute children */
-			padding: 21px; /* Padding for content */
-			color: #fff; /* Default text color */
-		}
+/* Styles for pagination and scrollbar */
+.swiper-pagination {
+    text-align: center; /* Center pagination */
+    margin-top: 10px; /* Space above pagination */
+}
 
-		.swiper-slide .carousel-content .platform-icon {
-			width: 160px; /* Width of platform icon */
-			height: 68px; /* Height of platform icon */
-			margin-bottom: 16px; /* Space below icon */
-		}
+.swiper-scrollbar {
+    background: rgba(255, 196, 0, 0.5); /* Background for scrollbar */
+    border-radius: 10px; /* Rounded corners */
+}
 
-		.swiper-slide .carousel-content p {
-			color: #fff; /* Default paragraph color */
-			width: 201px; /* Fixed width for paragraphs */
-			margin-bottom: 100px; /* Space below paragraph */
-		}
 
-		.swiper-slide .carousel-content p.text-black {
-			color: #202020; /* Black text for specific paragraphs */
-		}
-
-		.swiper-slide .carousel-content .arrow {
-			width: 38px; /* Width of arrow */
-			height: 27px; /* Height of arrow */
-			position: absolute; /* Position arrow absolutely */
-			bottom: 30px; /* Position from the bottom */
-		}
+		
 
 
 		</style>
@@ -769,46 +764,38 @@
 				</div>
 
 				<div class="swiper-container">
-					<div class="swiper-wrapper"><a class="swiper-slide" href="" tabindex="0" style="background-image: url('images/card\ 2.png');background-size:cover; background-position:center ;background-repeat: no-repeat;">
-						<div class="carousel-content">
-							<!-- <img class="platform-icon" src="images/Logo.svg" alt="platform icon"> -->
-							<p>We want to be Africa’s leading digital platform.</p>
-							<div id="promptbox_extension_root"></div>
-							<div id="promptbox_extension_root"></div>
-							<img class="arrow" src="images/Union.svg" alt="growth platform">
-						</div></a>
-						<a class="swiper-slide" href="" tabindex="0" style="background-image: url('images/card\ 5.png');background-size:cover; background-position:center ;background-repeat: no-repeat;">
-						<div class="carousel-content">
-							<!-- <img class="platform-icon" src="images/Logo-2.svg" alt="platform icon"> -->
-							<p>We celebrate the diversity of Africa by providing a world-class platform.</p>
-							<div id="promptbox_extension_root"></div>
-							<div id="promptbox_extension_root"></div>
-							<img class="arrow" src="images/Union.svg" alt="growth platform">
-						</div></a>
-						<a class="swiper-slide" href="" tabindex="0" style="background-image: url('images/card\ 4.png');background-size:cover; background-position:center ;background-repeat: no-repeat;">
-						<div class="carousel-content">
-							<!-- <img class="platform-icon" src="images/Logo-1.svg" alt="platform icon"> -->
-							<p style="color: #000000;">Our next-generation services company connecting Africa with digital solutions.</p>
-							<div id="promptbox_extension_root"></div>
-							<div id="promptbox_extension_root"></div>
-							<img class="arrow" src="images/Union.svg" alt="growth platform">
-						</div></a>
-						<a class="swiper-slide" href="" tabindex="0" style="background-image: url('images/card\ 1.png');background-size:cover; background-position:center ;background-repeat: no-repeat;">
-						<div class="carousel-content">
-							<!-- <img class="platform-icon" src="images/Logo-3.svg" alt="platform icon"> -->
-							<p style="color: #000000;">Amazingpay is Africa’s leading digital currency marketplace.</p>
-							<div id="promptbox_extension_root"></div>
-							<div id="promptbox_extension_root"></div>
-							<img class="arrow" src="images/Union.svg" alt="growth platform">
-						</div></a>		
+					<div class="swiper-wrapper">
+						<a class="swiper-slide" href="" tabindex="0" style="background-image: url('images/card\ 2.png');">
+							<div class="carousel-content">
+								<p style="color: #fff;" >We want to be Africa’s leading digital platform.</p>
+								<img class="arrow" src="images/Union.svg" alt="growth platform">
+							</div>
+						</a>
+						<a class="swiper-slide" href="" tabindex="0" style="background-image: url('images/card\ 5.png');">
+							<div class="carousel-content">
+								<p style="color: #fff;" >We celebrate the diversity of Africa by providing a world-class platform.</p>
+								<img class="arrow" src="images/Union.svg" alt="growth platform">
+							</div>
+						</a>
+						<a class="swiper-slide" href="" tabindex="0" style="background-image: url('images/card\ 4.png');">
+							<div class="carousel-content">
+								<p style="color: #000000;">Our next-generation services company connecting Africa with digital solutions.</p>
+								<img class="arrow" src="images/Union.svg" alt="growth platform">
+							</div>
+						</a>
+						<a class="swiper-slide" href="" tabindex="0" style="background-image: url('images/card\ 1.png');">
+							<div class="carousel-content">
+								<p style="color: #000000;">Amazingpay is Africa’s leading digital currency marketplace.</p>
+								<img class="arrow" src="images/Union.svg" alt="growth platform">
+							</div>
+						</a>
 					</div>
-
-					<!-- pagination -->
+				
+					<!-- Pagination -->
 					<div class="swiper-pagination"></div>
-
-					<!-- scrollbar -->
+				
+					<!-- Scrollbar -->
 					<div class="swiper-scrollbar"></div>
-
 				</div> 
 			</div>
 
